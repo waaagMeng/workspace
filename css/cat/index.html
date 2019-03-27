@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;padding: 0;
+    }
+    .mao-container{
+        width: 100%;
+        height: 800px;
+        position: relative;
+        margin: 0 auto;
+        background-color:red;
+    }
+   .mao-wei{
+       position: absolute;
+       left: 100px;
+       animation: ani5_leg1 8s ease infinite;
+  }
+  @keyframes ani5_leg1 {
+    0% {
+      transform: rotate(15deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    45%{
+        transform: rotate(5deg);
+    }
+   50%{
+       transform: rotate(0deg);
+   }
+   65%{
+       transform: rotate(-10deg);
+   }
+   80%{
+       transform: rotate(10deg);
+   }
+   95%{
+       transform: rotate(-5deg);
+   }
+   100%{
+       transform: rotate(0deg);
+   }
+    
+  }
+   
+   .mao-shen{
+       position: absolute;
+       top: 180px;
+       left: 110px;
+       z-index: 100;
+   }
+   .mao-zhua{
+       position: absolute;
+       top: 370px;
+       left: 175px;
+       z-index: 10;
+   }
+   .mao-yan1{
+       position: absolute;
+       top: 348px;
+       left: 202px;
+       z-index: 200;
+   }
+   .mao-yan2{
+       position: absolute;
+       top: 346px;
+       left: 189px;
+       z-index: 200;
+   }
+   .mao-zui{
+       position: absolute;
+       top: 357px;
+       left: 191px;
+       z-index: 200;
+   }
+    </style>
+</head>
+<body>
+    <div class="mao-container">
+        <div class="mao-wei">
+            <img src="maowei.png" alt="">
+        </div>
+        <div class="mao-shen">
+            <img src="maoshenti.png" alt="">
+        </div>
+         <div class="mao-zhua">
+             <img src="maozhua.png" alt="">
+         </div>
+         <div class="mao-yan">
+            <div class="mao-yan1">
+                <img src="maoyan1.png" alt="">
+            </div>
+            <div class="mao-yan2">
+                <img src="maoyan2.png" alt="">
+            </div>
+        </div>
+        <div class="mao-zui">
+            <img src="maozui.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
