@@ -23,7 +23,7 @@ body{
 .view.proload{
     background-color: #ffebeb;
     z-index: 11;
-    transition: transform .3s;
+    transition: transform .5s;
 }
 /* 上部分容器 */
 .load-logo-c{

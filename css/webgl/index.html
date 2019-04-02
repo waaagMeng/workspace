@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebGL-3D 地球</title>
+</head>
+<body>
+    <!-- 画布 webgl的容器 -->
+   <canvas id="webglcanvas">
+
+   </canvas> 
+   <script src="https://cdn.bootcss.com/three.js/r83/three.min.js"></script>
+   <script>
+   var canvas,/*幕布*/
+    camera,/*摄像机*/
+    scene, /*场景*/
+    group,
+    renderer; /*渲染器 导演看的那个机器*/
+
+    var mouseX = 0, mouseY = 0;
+    var windowHalfX = window.innerWidth / 2;
+    var windowHalfY = window.innerHeight / 2;
+    // 做准备 
+   init();
+   animate();
+  function animate(){
+    //请求运动帧 刷新每秒拍下的 API 不停的刷新canvas的静态照片
+    requestAnimationFrame(animate);
+    render();
+  }
+  function render(){
+      camera.position.x += (mouseX - camera.position.x)*0.05; //移动摄像机
+      camera.position.y +=(-mouseY - camera.position.y)*0.05;
+      camera.lookAt(scene.position); 
+      renderer.render(scene,camera);
+      group.rotation.y-=0.005;//绕y轴逆时针旋转
+  }
+   function init () {
+    canvas=document.getElementById('webglcanvas');
+    // 1. 框架里提供了相机 从框架中取出照相机摆好 THREE里有着3d的一切
+    //参数60：相机取的角度  1,2000:最远和最近能拍到哪里 window.innerWidth/window.innerHerght：摄像的屏幕比（横着拿还是竖着）
+    camera = new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,1,2000);
+    
+    //2.相机和画面的距离 x y z
+    camera.position.z = 500;
+    
+
+    //3.场景布置
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xffffff);
+    
+    //4.往里面添加演员 组员
+    group = new THREE.Group();
+    scene.add(group);
+
+    //地球 形状 + 表面材质
+    
+    //帮你载入那张图片
+    var loader = new THREE.TextureLoader();
+    //待加载完图片才能把它贴到形状上  回调函数
+    loader.load('earth.jpg',function(texture){
+        //形状 构建一个球形 这个形状不能直接加入到场景 要贴上图片 好看！
+        var geometry = new THREE.SphereGeometry(200,20,20);
+        //材质 现在不是一张图片了 是一张可以贴上去的材料 
+        var material = new THREE.MeshBasicMaterial({map:texture});
+        //传入形状和材质 生成这个3d物体
+        var mesh = new THREE.Mesh(geometry,material);
+        group.add(mesh);
+    });
+    //添加渲染器 让它和容器结合 在幕布上显示
+    renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        antialias: true //让3d输出更加平滑 抗锯齿
+    });
+    //设置渲染器大小 全屏
+    renderer.setSize(window.innerWidth,window.innerHeight);
+    document.addEventListener('mousemove',onDocumentMouseMove,false);
+    window.addEventListener('resize',onWindowResize,false);
+   }
+   function onWindowResize(event) {
+    console.log('resize');
+    windowHalfX = window.innerWidth / 2;
+    windowHalfY = window.innerHeight / 2;  //窗口大小改变 摄像机的拍摄啥的也要变 才拍的好哦
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth,window.innerHeight);
+
+   }
+   function onDocumentMouseMove(event) {
+    mouseX = (event.clientX - windowHalfX);
+    mouseY = (event.clientX - windowHalfY);
+    console.log(mouseX,mouseY);
+   }
+   </script>
+</body>
+</html>
