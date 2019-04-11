@@ -17,7 +17,7 @@ html {
     line-height: 1.62;
   }
   a:hover{
-     color: #fff;
+     color: #ffffff;
      text-decoration: none;
      background: #37a;
   }
@@ -25,9 +25,11 @@ html {
     color: #37a;
     text-decoration: none;
 }
+
 a:visited{
-    color: #669;
+    color: #37a;
     text-decoration: none;
+    
 }
   body {
     padding-top: 30px;
@@ -534,4 +536,160 @@ a img{
     margin: auto;
     background-color: transparent;
     background-image: -webkit-linear-gradient(top, transparent,rgba(0,0,0,0.25));
+}
+.side-links{
+    margin-bottom: 40px;
+}
+.side-links li{
+    position: relative;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.tags ul{
+    margin-top: -4px;
+}
+.tags li{
+    width: 4em;
+    margin-top: 4px;
+    text-align:left;
+}
+.list li{
+    display: inline-block;
+    zoom: 1;
+    vertical-align: top;
+    font-size: 12px;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+#anony-movie .movie-charts ol{
+    margin: 0;
+    padding: 0;
+}
+#anony-movie .movie-charts li{
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    list-style-type: decimal;
+    list-style-position: inside;
+    border-bottom: 1px solid #eaeaea;
+}
+#anony-movie .movie-charts li a{
+    margin-left: 5px;
+}
+#anony-movie .movie-list .pic{
+    height: 145px;
+    overflow: hidden;
+}
+.list{
+    font-size: 0;
+    letter-spacing: -31em;
+}
+.list .pic{
+    margin-bottom: 10px;
+}
+#anony-movie .movie-list img{
+    width: 100px;
+}
+.list .title{
+    line-height: 1.45;
+    font-size: 13px;
+    margin-bottom: 4px;
+    word-wrap: break-word;
+}
+  .movie-list li{
+    display: inline-block;
+    zoom: 1;
+    width: 24.8%;
+    vertical-align: top;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+.movie-list{
+    margin-top: -40px;
+}
+#anony-movie .movie-list .title a:link, #anony-movie .movie-list .title a:visited{
+    color: #333;
+}
+.rating{
+    margin-bottom: 4px;
+}
+.allstar40{
+    background-position: 0 -22px;
+    background:-webkit-image-set(url(https://img3.doubanio.com/f/shire/b8f4c3672ef81106701071831e22422a745d3b74/pics/rating_icons/ic_rating_s.png) 1x, url(https://img3.doubanio.com/f/shire/0147ca9efddcac80050854590d26bee587b008df/pics/rating_icons/ic_rating_s@2x.png) 2x) no-repeat;
+    width: 55px;
+    height: 11px;
+    margin: 0 3px 0 0;
+    overflow: hidden;
+}
+.rating i{
+    margin-left: 4px;
+    color: #e09015;
+}
+#anony-movie .bn-link:link, #anony-movie .bn-link:visited{
+    background: #1c8bd0;
+    color: #fff;
+}
+.bn-link{
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    padding: 2px 10px;
+    border-radius: 2px;
+}
+#anony-group .section-title a:link, #anony-group .section-title a:visited{
+    color: #007982;
+}
+#anony-group a:link, #anony-group a:visited{
+    color: #017a85;
+}
+.cate{
+    margin-bottom: 10px;
+}
+.cate ul{
+    margin-left: -10px;
+}
+.cate .cate-label{
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 14px;
+    
+}
+#anony-group .cate .cate-label a{
+    color: #333333;
+}
+.cate li{
+    display:inline-block;
+    zoom: 1;
+    margin-left: 10px;
+}
+#anony-group .group-list ul{
+    margin-left: -30px;
+    margin-top: -30px;
+}
+#anony-group .group-list li{
+    width: 248px;
+    margin-left: 30px;
+    margin-top: 30px;
+    text-align:left;
+    overflow: hidden;
+    zoom: 1;
+    color: #999;
+}
+#anony-group .group-list .pic{
+    float: left;
+    margin-right: 15px;
+}
+.list .pic{
+    margin-bottom: 10px;
+}
+#anony-group .group-list .info{
+    overflow: hidden;
+    zoom: 1;
+}
+#anony-group .group-list .title{
+    margin-bottom: 5px;
+    word-wrap:break-word;
 }
