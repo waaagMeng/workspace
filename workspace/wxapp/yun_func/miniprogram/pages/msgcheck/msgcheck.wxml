@@ -1,0 +1,2 @@
+<!--miniprogram/pages/msgcheck/msgcheck.wxml-->
+<button bindtap="msgCheck">msgCheck</button>

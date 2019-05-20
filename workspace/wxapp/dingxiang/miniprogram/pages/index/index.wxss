@@ -1,0 +1,41 @@
+.three{
+ 
+  display: flex;
+}
+.askdoc{
+  position: relative;
+  flex: 1;
+}
+.three .pic{
+  text-align: center;
+}
+.word-title{
+ text-align: center;
+  font-size: 14px;
+}
+.word-detail{
+  text-align: center;
+  font-size: 12px;
+  color: #666666;
+}
+.famous{
+  flex:1;
+}
+.buy{
+  flex:1;
+}
+.four{
+  padding-top: 25px;
+  display: flex;
+}
+.sound{
+  flex: 1;
+}
+.sound .pic{
+  text-align: center;
+}
+.four .word{
+  text-align: center;
+  font-size: 12px;
+  color: #6f767c;
+}

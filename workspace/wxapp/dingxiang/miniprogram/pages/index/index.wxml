@@ -1,0 +1,93 @@
+<van-search value="{{ value }}" placeholder="# 防晒霜有毒？#" />
+<view class="three">
+    <view class="askdoc">
+        <view class="pic">
+            <image src="../../pic/askdoc.png" 
+            aspectFit
+            style="width:60px;height:60px;"
+            />
+        </view>
+        <view class="word-title">
+            问医生
+        </view>
+        <view class="word-detail">
+            按科室找医生
+        </view>
+    </view>
+    <view class="famous">
+                <view class="pic">
+            <image src="../../pic/famous.png" 
+            aspectFit
+            style="width:60px;height:60px;"
+            />
+        </view>
+        <view class="word-title">
+            名医就诊
+        </view>
+        <view class="word-detail">
+            新人1元起
+        </view>
+    </view>
+    <view class="buy">
+                <view class="pic">
+            <image src="../../pic/buy.png" 
+            aspectFit
+            style="width:60px;height:60px;"
+            />
+        </view>
+        <view class="word-title">
+            在线购药
+        </view>
+        <view class="word-detail">
+            限时包邮
+        </view>
+    </view>
+</view>
+<view class="four">
+    <view class="sound">
+        <view class="pic">
+            <image src="../../pic/sound.png" 
+            aspectFit
+            style="width:25px;height:25px;"
+            />
+        </view>
+        <view class="word">
+            语音急诊
+        </view>
+    </view>
+    <view class="sound">
+        <view class="pic">
+            <image src="../../pic/group.png" 
+            aspectFit
+            style="width:25px;height:25px;"
+            />
+        </view>
+        <view class="word">
+            成长测评
+        </view>
+    </view>
+    <view class="sound">
+        <view class="pic">
+            <image src="../../pic/sick.png" 
+            aspectFit
+            style="width:25px;height:25px;"
+            />
+        </view>
+        <view class="word">
+            查疾病
+        </view>
+    </view>
+    <view class="sound">
+        <view class="pic">
+            <image src="../../pic/class.png" 
+            aspectFit
+            style="width:25px;height:25px;"
+            />
+        </view>
+        <view class="word">
+            医师讲堂
+        </view>
+    </view>
+
+</view>
+  

@@ -1,0 +1,49 @@
+
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ask/ask",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "丁香医生",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#27b8a2",
+    "borderStyle": "black",
+    "backgroundColor": "#f5f5f5",
+    "selectedindex": 1,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pic/index.png",
+        "selectedIconPath": "pic/index-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/ask/ask",
+        "iconPath": "pic/ask.png",
+        "selectedIconPath": "pic/ask-active.png",
+        "text": "问诊"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "pic/my.png",
+        "selectedIconPath": "pic/my-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-search": "dist/search/index",
+    "van-row": "dist/row/index",
+    "van-col": "dist/col/index"
+  }
+
+}

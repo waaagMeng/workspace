@@ -19,11 +19,46 @@
     xhr.send()
     // console.log(xhr.responseText)
     // console.log(xhr.readyState,xhr.status)
-    xhr.onreadystatechange = function () {
+    var p = new Promise((resolve,reject) => {
+        xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             console.log(xhr.responseText)
+            resolve(xhr.responseText)
         }
     }
+    })
+    
+    function xq() {
+        return new Promise((resolve,reject) => {
+            setTimeout(() => {
+            console.log("猛哥要相亲了！")
+            resolve('相亲很顺利!')
+        },1000)
+        })
+    }
+    // xq()
+    function marry() {
+        return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            console.log("猛哥结婚了！")
+        },500)
+    })
+    }
+    // p
+    // .then(xq)
+    // .then(marry)
+    // .catch(() => {
+    //     console.log("猛哥出家了")
+    // })
+    // Promise.all([p, xq()]).then(marry).catch((err) =>{
+    //     console.log(err)
+    // })                    //在.all里面执行的函数没有顺序
+    Promise.race([p, xq(),marry()]).then((value) => {    //.then里拿到的值是最快的里面的值 也就是p  race可以取到接口最快的方法
+        console.log(value,'---------')
+    }).catch((err) =>{
+         console.log(err)
+     }) 
+
     </script>
 </body>
 </html>
