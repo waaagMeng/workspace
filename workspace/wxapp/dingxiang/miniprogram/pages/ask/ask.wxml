@@ -1,2 +1,55 @@
 <!--miniprogram/pages/ask/ask.wxml-->
-<text>miniprogram/pages/ask/ask.wxml</text>
+<view class="head">
+    <text>咨询医生</text>
+</view>
+<view class="service">
+    <view class="service-title">
+       <text >严格质控 双重审核</text> 
+    </view>
+    <view class="service-detail" >
+        <text decode="nbsp">三甲以上主治医师 &nbsp;&nbsp; 专家团队双重审核</text>
+        <van-icon name="arrow" size=".9em" />
+    </view> 
+</view>
+<view class="container">
+    <view class="left">
+         <image src="../../pic/picask.png" 
+            aspectFit
+            style="width:50px;height:50px;"
+            />
+    </view>
+    <view class="right">
+        <view class="right-title"><text>图文问诊</text></view>
+        <view class="right-detail"><text>快速匹配医生 平均1小时回复</text>
+        <van-icon name="arrow" class="container-arrow" />
+        </view>
+    </view>
+</view>
+<view class="container">
+    <view class="left">
+         <image src="../../pic/sound1.png" 
+            aspectFit
+            style="width:50px;height:50px;"
+            />
+    </view>
+    <view class="right">
+        <view class="right-title"><text>语音急诊</text></view>
+        <view class="right-detail"><text>一对一实时语音 平均60秒接通</text>
+        <van-icon name="arrow" class="container-arrow" />
+        </view>
+    </view>
+</view>
+<view class="container">
+    <view class="left">
+         <image src="../../pic/askdoc.png" 
+          
+            style="width:50px;height:50px;"
+            />
+    </view>
+    <view class="right">
+        <view class="right-title"><text>问医生</text></view>
+        <view class="right-detail"><text>按科室挑选合适的医生</text>
+        <van-icon name="arrow" class="container-arrow" />
+        </view>
+    </view>
+</view>

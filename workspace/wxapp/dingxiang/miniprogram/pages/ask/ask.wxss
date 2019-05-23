@@ -1,1 +1,51 @@
 /* miniprogram/pages/ask/ask.wxss */
+.head{
+    padding: 10px 20px;
+    font-size: 28px;
+    color: #333333;
+}
+.service{
+    margin: 0px 20px;
+    border: 1px solid #f8f8f8;
+    background-color: #f8f8f8;
+    padding: 5px 15px;
+    position: relative;
+  }
+  .service-title{
+    font-family:Microsoft JhengHei;
+    font-weight: bold;
+    color: #6f767c;
+    font-size: 14px;
+  }
+  .service-detail{
+    font-size: 12px;
+    color: #999999;
+    padding-left: 10px;
+  }
+  van-icon{
+  position:absolute;
+  right:15px;
+  top:50%;
+  transform:translateY(-50%);
+  }
+  .container{
+    display: flex;
+    padding: 10px 20px 10px 10px;
+    margin: 20px;
+    box-shadow: 5rpx 10rpx 20rpx 5rpx #eeeeee;
+    position: relative;
+  }
+  .container .right{
+    padding-left: 10px;
+  }
+  .container .right .right-detail{
+    font-size: 12px;
+    color: #999999;
+    padding-top: 10rpx;
+  }
+  .container-arrow{
+    position: absolute;
+    right: 20rpx;
+    top: 50%;
+    transform: translateY(-50%);
+  }

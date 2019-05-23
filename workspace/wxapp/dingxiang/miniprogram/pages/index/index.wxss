@@ -1,5 +1,4 @@
 .three{
- 
   display: flex;
 }
 .askdoc{
@@ -28,6 +27,10 @@
   padding-top: 25px;
   display: flex;
 }
+.four2{
+  padding-top: 20px;
+  display: flex;
+}
 .sound{
   flex: 1;
 }
@@ -38,4 +41,30 @@
   text-align: center;
   font-size: 12px;
   color: #6f767c;
+}
+.four2 .word{
+  text-align: center;
+  font-size: 12px;
+  color: #6f767c;
+}
+.service{
+  padding: 20px 15px;
+  position: relative;
+}
+.service-title{
+  font-family:Microsoft JhengHei;
+  font-weight: bold;
+  color: #6f767c;
+  font-size: 14px;
+}
+.service-detail{
+  font-size: 12px;
+  color: #999999;
+  padding-left: 10px;
+}
+van-icon{
+position:absolute;
+right:15px;
+top:50%;
+transform:translateY(-50%);
 }

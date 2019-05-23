@@ -1,2 +1,121 @@
 <!--miniprogram/pages/my/my.wxml-->
-<text>miniprogram/pages/my/my.wxml</text>
+<view class="header">
+    <view class="user">
+        <view class="touxiang">
+            <image src="../../pic/touxiang.png" 
+             aspectFit
+            style="width:50px;height:50px;"/>
+        </view>
+    <view class="username"><text>dxy_gzuvc6n6</text></view>
+    </view>
+    <view class="choosebar">
+        <view class="chooseitem">
+           <view class="amount"><text>0</text></view>
+            <view class="choose-detail">关注医生</view>
+        </view>
+         <view class="chooseitem">
+           <view class="amount"><text>0</text></view>
+            <view class="choose-detail">医生卡</view>
+        </view>
+         <view class="chooseitem">
+           <view class="amount"><text>0</text></view>
+            <view class="choose-detail">优惠券</view>
+        </view>
+         <view class="chooseitem">
+           <view class="amount"><text>0</text></view>
+            <view class="choose-detail">收藏内容</view>
+        </view>
+    </view>
+</view>
+<view class="content">
+<view class="container-five">
+    <view class="container-item">
+        <view class="item-icon"><image src="../../pic/myask.png" 
+         aspectFit
+        style="width:25px;height:25px;"
+        /></view>
+        <view class="item-word">我的问诊</view>
+    </view>
+    <view class="container-item">
+        <view class="item-icon"><image src="../../pic/myrep.png" 
+         aspectFit
+        style="width:25px;height:25px;"
+        /></view>
+        <view class="item-word">我的处方</view>
+    </view>
+    <view class="container-item">
+        <view class="item-icon"><image src="../../pic/dingdan.png" 
+         aspectFit
+        style="width:25px;height:25px;"
+        /></view>
+        <view class="item-word">药品订单</view>
+    </view>
+    <view class="container-item">
+        <view class="item-icon"><image src="../../pic/myclass.png" 
+         aspectFit
+        style="width:25px;height:25px;"
+        /></view>
+        <view class="item-word">医师讲堂</view>
+    </view>
+    <view class="container-item">
+        <view class="item-icon"><image src="../../pic/student.png" 
+         aspectFit
+        style="width:25px;height:25px;"
+        /></view>
+        <view class="item-word">成长测评</view>
+    </view>
+</view>
+<view class="gongyi">
+    <view class="gongyi-container">
+        <view class="gongyi-title">
+            <text>丁香公益金</text>
+            <text class="free">免费报销</text>
+        </view>
+        <view class="gongyi-detail">
+            <text>报销门诊医药费 兑换礼品和优惠券</text>
+            <view class="detail-amount">
+                6.00
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </view>
+</view>
+<view class="gongyi">
+    <view class="gongyi-container">
+        <view class="gongyi-title">
+            <text>私人医生</text>
+        </view>
+            <view class="detail-amount">
+                0
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </view>
+<view class="gongyi">
+    <view class="gongyi-container">
+        <view class="gongyi-title">
+            <text>患者信息</text>
+        </view>
+        <view class="gongyi-detail">
+            <view class="detail-amount">
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </view>
+</view>
+<view class="gongyi">
+    <view class="gongyi-container">
+        <view class="gongyi-title">
+            <text>用户反馈</text>
+        </view>
+        <view class="gongyi-detail">
+            <view class="detail-amount">
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </view>
+</view>
+<view class="xieyi">
+    <text>使用 丁香医生 即代表你完全接受我们的用户协议</text>
+</view>
+</view>

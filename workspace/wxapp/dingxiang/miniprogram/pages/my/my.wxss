@@ -1,1 +1,89 @@
 /* miniprogram/pages/my/my.wxss */
+.header{
+    background-color: #deded9;
+}
+.user{
+    display: flex;
+}
+.user .touxiang{
+    padding:15rpx 5rpx 10rpx 20rpx;
+}
+.user .username{
+    vertical-align: middle;
+    font-size: 18px;
+    padding: 15px 15px;
+}
+.choosebar{
+    display: flex;
+    padding: 15px 15px;
+}
+.chooseitem{
+    flex: 1;
+}
+.choosebar .chooseitem .amount{
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+}
+.choosebar .chooseitem .choose-detail{
+    font-size: 12px;
+    color: #979a99;
+    text-align: center;
+}
+.container-five{
+    display: flex;
+    padding: 20px 6px;
+    background-color: white;
+}
+.container-item{
+    flex: 1;
+}
+.container-item .item-icon{
+    text-align: center;
+}
+.container-item .item-word{
+    font-size: 12px;
+    color: #000000;
+    text-align: center;
+}
+.content{
+    background-color: #f4f4f4;
+}
+.gongyi{
+    margin: 10px 0px;
+    background-color: white;
+    padding: 15px;
+}
+.gongyi .gongyi-container{
+    position: relative;
+}
+.gongyi-title{
+    font-size: 16px;
+}
+.gongyi-title .free{
+    padding: 5rpx 15rpx;
+    background-color: #27b8a2;
+    font-size: 12px;
+    color:#f4f4f4;
+    margin-left: 18rpx;
+    font-weight: 550;
+}
+.gongyi-detail{
+    color: #999999;
+    font-size: 12px; 
+    vertical-align: middle;
+}
+.detail-amount{
+    position: absolute;
+    right: 5rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #999999;
+   
+}
+.xieyi{
+    font-size: 12px;
+    color: #999999;
+    padding: 15px;
+}

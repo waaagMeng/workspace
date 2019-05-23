@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // async是函数修饰符号
+        function breathe(amount) {
+            return new Promise((resolve,reject) => {
+                setTimeout(() => 
+                    resolve(`Done for ${amount} ms`)
+                , amount);
+            })
+        }
+    async function go(name,last) {
+        // 当我们有多种不同类型的或者不同步骤的异步要解决时，then有点太长
+        const res = await breathe(1000);
+        console.log(res);
+        const res2 = await breathe(3000);
+        console.log(res2);
+        const res3 = await breathe(5000);
+        console.log(res3);
+        const res4 = await breathe(2000);
+        console.log(res4);
+
+
+        // res.then(data => {
+        //     console.log(data);
+        // })
+    }    
+    go();
+    </script>
+</body>
+</html>

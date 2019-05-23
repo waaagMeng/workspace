@@ -1,4 +1,5 @@
 <van-search value="{{ value }}" placeholder="# 防晒霜有毒？#" />
+<view class="head">
 <view class="three">
     <view class="askdoc">
         <view class="pic">
@@ -90,4 +91,61 @@
     </view>
 
 </view>
-  
+<view class="four2">
+    <view class="sound">
+        <view class="pic">
+            <image src="../../pic/private.png" 
+            aspectFit
+            style="width:25px;height:25px;"
+            />
+        </view>
+        <view class="word">
+            私人医生
+        </view>
+    </view>
+    <view class="sound">
+        <view class="pic">
+            <image src="../../pic/hospital.png" 
+            aspectFit
+            style="width:25px;height:25px;"
+            />
+        </view>
+        <view class="word">
+            查医院
+        </view>
+    </view>
+    <view class="sound">
+        <view class="pic">
+            <image src="../../pic/report.png" 
+            aspectFit
+            style="width:25px;height:25px;"
+            />
+        </view>
+        <view class="word">
+            报告解读
+        </view>
+    </view>
+    <view class="sound">
+        <view class="pic">
+            <image src="../../pic/fund.png" 
+            aspectFit
+            style="width:25px;height:25px;"
+            />
+        </view>
+        <view class="word">
+            丁香公益金
+        </view>
+    </view>
+</view>
+<view class="service">
+    <view class="service-title">
+       <text >严格质控 双重审核</text> 
+    </view>
+    <view class="service-detail" >
+        <text decode="nbsp">三甲以上主治医师 &nbsp;&nbsp; 专家团队双重审核</text>
+        <van-icon name="arrow" />
+    </view> 
+    </view>
+   
+</view>
+

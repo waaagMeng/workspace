@@ -1,9 +1,9 @@
 
 {
   "pages": [
+    "pages/my/my",
     "pages/index/index",
-    "pages/ask/ask",
-    "pages/my/my"
+    "pages/ask/ask"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -43,7 +43,8 @@
   "usingComponents": {
     "van-search": "dist/search/index",
     "van-row": "dist/row/index",
-    "van-col": "dist/col/index"
+    "van-col": "dist/col/index",
+    "van-icon": "dist/icon/index"
   }
 
 }
