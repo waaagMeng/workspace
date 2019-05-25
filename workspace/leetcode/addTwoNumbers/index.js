@@ -51,10 +51,10 @@ var addTwoNumbers = function(l1,l2) {
     // 返回的应该也是一个结点,只要头结点
     let ret = [];
     for (let i = 0,len = ans.length; i < len; i++) {
-        ret[i] = new LinkedNode(ans[i]);
+        ret[i] = new LinkedNode(ans[i]);  //值部分
     }
     for(let i = 0,len = ans.length; i < len - 1;i++) {
-        ret[i].next = ret[i+1];
+        ret[i].next = ret[i+1]; //指针
     }
 
     return ret[0];
