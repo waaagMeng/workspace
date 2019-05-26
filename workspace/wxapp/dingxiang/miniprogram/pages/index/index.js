@@ -3,11 +3,27 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: './user-unlogin.png',
-    userInfo: {},
-    logged: false,
-    takeSession: false,
-    requestResult: ''
+    //tab切换
+    display:true,
+    contentAsk:false,
+    contentFam:false
+  },
+  swichNav:function (e) {
+    var index = e.currentTarget.dataset.index;
+      console.log(index);
+      if (index = 1) {
+         this.setData({
+        display:false,
+        contentFam:false,
+        contentAsk:true
+      })
+    }else if (index = 2) {
+      this.setData({
+        display:false,
+        contentAsk:false,
+        contentFam:true
+      })
+    }
   },
 
   onLoad: function() {

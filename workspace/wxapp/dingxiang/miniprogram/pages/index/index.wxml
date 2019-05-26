@@ -1,7 +1,8 @@
+<view class="container" wx:if="{{display}}">
 <van-search value="{{ value }}" placeholder="# 防晒霜有毒？#" />
-<view class="head">
-<view class="three">
-    <view class="askdoc">
+<view class="content">
+<view class="three" >
+    <view class="askdoc" data-index = "1" bindtap="swichNav">
         <view class="pic">
             <image src="../../pic/askdoc.png" 
             aspectFit
@@ -15,7 +16,7 @@
             按科室找医生
         </view>
     </view>
-    <view class="famous">
+    <view class="famous" data-index = "2" bindtap="swichNav">
                 <view class="pic">
             <image src="../../pic/famous.png" 
             aspectFit
@@ -29,7 +30,7 @@
             新人1元起
         </view>
     </view>
-    <view class="buy">
+    <view class="buy" data-index = "3" bindtap="swichNav">
                 <view class="pic">
             <image src="../../pic/buy.png" 
             aspectFit
@@ -145,7 +146,20 @@
         <text decode="nbsp">三甲以上主治医师 &nbsp;&nbsp; 专家团队双重审核</text>
         <van-icon name="arrow" />
     </view> 
+</view>
+</view>
+</view>
+<!-- 跳到问医生页面 -->
+<view class="content-ask" wx:if="{{contentAsk}}">
+    <view class="search">
+        查找
     </view>
-   
+</view>
+
+<!-- 跳到名医就诊页面 -->
+<view class="content-mingyi" wx:elif="{{contentFam}}">
+    <view class="head">
+        明医
+    </view>
 </view>
 

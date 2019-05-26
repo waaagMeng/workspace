@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         {{message}}
-        <p class="cool" v-bind:class="{good:isGood}" @click="reverseMsg">{{msg}}</p>
+        <p class="cool" v-bind:class="{good:isGood}" v-on:click="reverseMsg">{{msg}}</p>
         <!-- <p class="cool" v-bind:class="isGood ? 'good' : 'bad'">熊哥哥好帅</p> -->
         <!-- <p class="cool" :class="[activeClass]">熊哥哥好帅</p>
         <ul>
@@ -36,7 +36,7 @@
             },
             methods:{
                 reverseMsg() {
-                    this.msg = this.msg.split('').reverse().join('')
+                    this.msg = this.msg.split('').reverse().join()
                 }
             }
         })
