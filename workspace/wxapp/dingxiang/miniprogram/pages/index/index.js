@@ -11,13 +11,13 @@ Page({
   swichNav:function (e) {
     var index = e.currentTarget.dataset.index;
       console.log(index);
-      if (index = 1) {
+      if (index == 1) {
          this.setData({
         display:false,
         contentFam:false,
         contentAsk:true
       })
-    }else if (index = 2) {
+    }else if (index == 2) {
       this.setData({
         display:false,
         contentAsk:false,
