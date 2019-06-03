@@ -1,165 +1,111 @@
 <view class="container" wx:if="{{display}}">
-<van-search value="{{ value }}" placeholder="# 防晒霜有毒？#" />
-<view class="content">
-<view class="three" >
-    <view class="askdoc" data-index = "1" bindtap="swichNav">
-        <view class="pic">
-            <image src="../../pic/askdoc.png" 
-            aspectFit
-            style="width:60px;height:60px;"
-            />
-        </view>
-        <view class="word-title">
-            问医生
-        </view>
-        <view class="word-detail">
-            按科室找医生
-        </view>
-    </view>
-    <view class="famous" data-index = "2" bindtap="swichNav">
+    <van-search value="{{ value }}" placeholder="# 防晒霜有毒？#" />
+    <view class="content">
+        <view class="three">
+            <view class="askdoc" data-index="1" bindtap="swichNav">
                 <view class="pic">
-            <image src="../../pic/famous.png" 
-            aspectFit
-            style="width:60px;height:60px;"
-            />
-        </view>
-        <view class="word-title">
-            名医就诊
-        </view>
-        <view class="word-detail">
-            新人1元起
-        </view>
-    </view>
-    <view class="buy" data-index = "3" bindtap="swichNav">
+                    <image src="../../pic/askdoc.png" aspectFit style="width:60px;height:60px;" />
+                </view>
+                <view class="word-title">问医生</view>
+                <view class="word-detail">按科室找医生</view>
+            </view>
+            <view class="famous" data-index="2" bindtap="swichNav">
                 <view class="pic">
-            <image src="../../pic/buy.png" 
-            aspectFit
-            style="width:60px;height:60px;"
-            />
+                    <image src="../../pic/famous.png" aspectFit style="width:60px;height:60px;" />
+                </view>
+                <view class="word-title">名医就诊</view>
+                <view class="word-detail">新人1元起</view>
+            </view>
+            <view class="buy" data-index="3" bindtap="swichNav">
+                <view class="pic">
+                    <image src="../../pic/buy.png" aspectFit style="width:60px;height:60px;" />
+                </view>
+                <view class="word-title">在线购药</view>
+                <view class="word-detail">限时包邮</view>
+            </view>
         </view>
-        <view class="word-title">
-            在线购药
+        <view class="four">
+            <view class="sound">
+                <view class="pic">
+                    <image src="../../pic/sound.png" aspectFit style="width:25px;height:25px;" />
+                </view>
+                <view class="word">语音急诊</view>
+            </view>
+            <view class="sound">
+                <view class="pic">
+                    <image src="../../pic/group.png" aspectFit style="width:25px;height:25px;" />
+                </view>
+                <view class="word">成长测评</view>
+            </view>
+            <view class="sound">
+                <view class="pic">
+                    <image src="../../pic/sick.png" aspectFit style="width:25px;height:25px;" />
+                </view>
+                <view class="word">查疾病</view>
+            </view>
+            <view class="sound">
+                <view class="pic">
+                    <image src="../../pic/class.png" aspectFit style="width:25px;height:25px;" />
+                </view>
+                <view class="word">医师讲堂</view>
+            </view>
         </view>
-        <view class="word-detail">
-            限时包邮
+        <view class="four2">
+            <view class="sound">
+                <view class="pic">
+                    <image src="../../pic/private.png" aspectFit style="width:25px;height:25px;" />
+                </view>
+                <view class="word">私人医生</view>
+            </view>
+            <view class="sound">
+                <view class="pic">
+                    <image src="../../pic/hospital.png" aspectFit style="width:25px;height:25px;" />
+                </view>
+                <view class="word">查医院</view>
+            </view>
+            <view class="sound">
+                <view class="pic">
+                    <image src="../../pic/report.png" aspectFit style="width:25px;height:25px;" />
+                </view>
+                <view class="word">报告解读</view>
+            </view>
+            <view class="sound">
+                <view class="pic">
+                    <image src="../../pic/fund.png" aspectFit style="width:25px;height:25px;" />
+                </view>
+                <view class="word">丁香公益金</view>
+            </view>
         </view>
-    </view>
-</view>
-<view class="four">
-    <view class="sound">
-        <view class="pic">
-            <image src="../../pic/sound.png" 
-            aspectFit
-            style="width:25px;height:25px;"
-            />
+        <view class="service">
+            <view class="service-title">
+                <text>严格质控 双重审核</text>
+            </view>
+            <view class="service-detail">
+                <text decode="nbsp">三甲以上主治医师 &nbsp;&nbsp; 专家团队双重审核</text>
+                <van-icon name="arrow" />
+            </view>
         </view>
-        <view class="word">
-            语音急诊
-        </view>
-    </view>
-    <view class="sound">
-        <view class="pic">
-            <image src="../../pic/group.png" 
-            aspectFit
-            style="width:25px;height:25px;"
-            />
-        </view>
-        <view class="word">
-            成长测评
-        </view>
-    </view>
-    <view class="sound">
-        <view class="pic">
-            <image src="../../pic/sick.png" 
-            aspectFit
-            style="width:25px;height:25px;"
-            />
-        </view>
-        <view class="word">
-            查疾病
-        </view>
-    </view>
-    <view class="sound">
-        <view class="pic">
-            <image src="../../pic/class.png" 
-            aspectFit
-            style="width:25px;height:25px;"
-            />
-        </view>
-        <view class="word">
-            医师讲堂
-        </view>
-    </view>
-
-</view>
-<view class="four2">
-    <view class="sound">
-        <view class="pic">
-            <image src="../../pic/private.png" 
-            aspectFit
-            style="width:25px;height:25px;"
-            />
-        </view>
-        <view class="word">
-            私人医生
-        </view>
-    </view>
-    <view class="sound">
-        <view class="pic">
-            <image src="../../pic/hospital.png" 
-            aspectFit
-            style="width:25px;height:25px;"
-            />
-        </view>
-        <view class="word">
-            查医院
-        </view>
-    </view>
-    <view class="sound">
-        <view class="pic">
-            <image src="../../pic/report.png" 
-            aspectFit
-            style="width:25px;height:25px;"
-            />
-        </view>
-        <view class="word">
-            报告解读
+        <!-- 内容 -->
+        
+            <view class="demo-date">{{today}}</view>
+            <view class="demo-container" wx:for="{{shouye}}">
+            <view class="tuijian">{{item.date}}</view>
+            <view class="demo-content">
+                <view class="demo-pic">
+                    <image src="{{item.images}}" aspectFit>
+                        <view class="demo-cate">{{item.cate}}</view>
+                        <view class="demo-title">{{item.title}}</view>
+                    </image>
+                </view>
+            </view>
         </view>
     </view>
-    <view class="sound">
-        <view class="pic">
-            <image src="../../pic/fund.png" 
-            aspectFit
-            style="width:25px;height:25px;"
-            />
-        </view>
-        <view class="word">
-            丁香公益金
-        </view>
-    </view>
-</view>
-<view class="service">
-    <view class="service-title">
-       <text >严格质控 双重审核</text> 
-    </view>
-    <view class="service-detail" >
-        <text decode="nbsp">三甲以上主治医师 &nbsp;&nbsp; 专家团队双重审核</text>
-        <van-icon name="arrow" />
-    </view> 
-</view>
-</view>
 </view>
 <!-- 跳到问医生页面 -->
 <view class="content-ask" wx:if="{{contentAsk}}">
-    <view class="search">
-        查找
-    </view>
+    <view class="search">查找</view>
 </view>
-
 <!-- 跳到名医就诊页面 -->
 <view class="content-mingyi" wx:elif="{{contentFam}}">
-    <view class="head">
-        明医
-    </view>
+    <view class="head">明医</view>
 </view>
-

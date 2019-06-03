@@ -6,7 +6,20 @@ Page({
     //tab切换
     display:true,
     contentAsk:false,
-    contentFam:false
+    contentFam:false,
+    shouye:[],
+    today:''
+  },
+  getDate:function () {
+    var date;
+    date = new Date();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    var newtoday = month + '月' + day + '日';
+    let that = this;
+    that.setData({
+      today:newtoday
+    })
   },
   swichNav:function (e) {
     var index = e.currentTarget.dataset.index;
@@ -27,29 +40,27 @@ Page({
   },
 
   onLoad: function() {
-    if (!wx.cloud) {
-      wx.redirectTo({
-        url: '../chooseLib/chooseLib',
-      })
-      return
-    }
-
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              })
-            }
-          })
-        }
+    wx.showLoading({
+      title:'加载中',
+    })
+    let that =this;
+    wx.request({
+      url:'https://www.easy-mock.com/mock/5ca457fa4767c3737055c895/example/dingxiang',
+      data:{},
+      method:'GET',
+      success:function(res) {
+        console.log(res);
+        let data = res.data.data;
+        that.setData({
+          shouye:data.shouye
+        })
+        wx.hideLoading()
+      },
+      fail:function() {
+        console.log('fail')
       }
     })
+    this.getDate();
   },
 
   onGetUserInfo: function(e) {
