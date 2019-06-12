@@ -8,6 +8,11 @@ Page({
     contentAsk:false,
     contentFam:false,
     shouye:[],
+    keshi:[],
+    neike:["内分泌科","心血管内科","神经内科","肾脏内科","呼吸内科","普通内科","风湿免疫科","血液科","感染传染科"],
+    waike:["神经外科","心胸外科","肝胆胰腺科","甲状腺科","普外科","美容整形科"],
+    other:["全科","精神心里科","肿瘤科","影像检验科","疼痛麻醉科","药剂科"],
+    imgUrls:["../../pic/swiper1.png","../../pic/swiper2.png"],
     today:''
   },
   getDate:function () {
@@ -52,7 +57,8 @@ Page({
         console.log(res);
         let data = res.data.data;
         that.setData({
-          shouye:data.shouye
+          shouye:data.shouye,
+          keshi:data.keshi
         })
         wx.hideLoading()
       },

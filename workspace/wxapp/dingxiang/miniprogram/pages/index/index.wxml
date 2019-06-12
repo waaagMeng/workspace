@@ -103,9 +103,41 @@
 </view>
 <!-- 跳到问医生页面 -->
 <view class="content-ask" wx:if="{{contentAsk}}">
-    <view class="search">查找</view>
-</view>
+    <van-search value="{{ value }}" placeholder="症状、疾病、医院、科室、医生名" />
+    <view class="common-title">常见科室</view>
+  <view class="common-sub" wx:for="{{keshi}}">
+        <view class="single-sub">
+          <view class="single-pic">
+            <image src="{{item.images}}"/>
+          </view>
+          <view class="single-word">
+            {{item.word}}
+          </view>
+        </view>
+    </view>
+    <view class="common-title">内科</view>
+    <view class="neike-container" wx:for="{{neike}}">
+      <view class="single-neike">{{item}}</view>
+    </view>
+    <view class="common-title">外科</view>
+    <view class="neike-container" wx:for="{{waike}}">
+      <view class="single-neike">{{item}}</view>
+    </view>
+    <view class="common-title">其他</view>
+    <view class="bottom">
+      <view class="neike-container" wx:for="{{other}}">
+      <view class="single-neike">{{item}}</view>
+    </view>
+    </view>
+  </view>
 <!-- 跳到名医就诊页面 -->
 <view class="content-mingyi" wx:elif="{{contentFam}}">
-    <view class="head">明医</view>
+  <swiper indicator-dots="true" circular="true"
+  autoplay="true" interval="5000" duration="1000">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" style="width:100%;height=100%;" aspectFit/>
+    </swiper-item>
+  </block>
+  </swiper>
 </view>

@@ -111,3 +111,44 @@ transform:translateY(-50%);
   left: 40rpx;
   font-size: 20px;
 }
+.common-title{
+  font-size: 14px;
+  color: #6e7582;
+  padding: 40rpx 40rpx 25rpx 40rpx;
+}
+.common-sub{
+  background-color: white;
+  padding-left: 25rpx;
+}
+.single-sub{
+  width: 150rpx;
+  float: left;
+  padding: 30rpx;
+  margin: 15rpx;
+  background-color: #f7f7f7;
+}
+.single-sub image{
+  padding-left: 40rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+.single-word{
+  font-size: 14px;
+  text-align: center;
+}
+.single-neike{
+  float: left;
+  width: 150rpx;
+  background-color: #f7f7f7;
+  font-size: 14px;
+  margin: 10rpx 10rpx;
+  padding: 30rpx;
+  text-align: center;
+}
+.neike-container{
+  background-color: white;
+  padding-left: 35rpx;
+}
+.bottom{
+  margin-bottom: 25rpx;
+}
