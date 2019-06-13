@@ -152,3 +152,135 @@ transform:translateY(-50%);
 .bottom{
   margin-bottom: 25rpx;
 }
+.mingyi-detail{
+  background-color: #f4f4f4;
+  font-size: 12px;
+  padding: 20rpx;
+}
+.five{
+  color: #fbb30c;
+  padding-left: 4rpx;
+  padding-right: 4rpx;
+  font-weight: bold;
+}
+.titleList{
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  background-color: #27b8a2;
+  box-sizing: content-box;
+}
+.list{
+  display: inline-block;
+  padding: 20rpx;
+  color: #ffffff;
+  line-height: 11px;
+  font-size: 13px;
+  margin: 15rpx;
+  text-align: center;
+  box-sizing: content-box;
+}
+.listActive{
+  font-size: 15px;
+}
+.mingyi-content{
+  display: flex;
+  padding-top: 15rpx;
+  padding-left: 15rpx;
+}
+.content-pic image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-top: 15rpx;
+}
+.content-right{
+  padding-left: 20rpx;
+  padding-bottom: 25rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.mingyi-name{
+  font-size: 14px;
+}
+.mingyi-name .rating{
+  font-size: 12px;
+  color: #6e7580;
+  padding-left: 8rpx;
+}
+.sanjia{
+  padding: 0 4rpx;
+  background-color: #6e7580;
+  color: #ffffff;
+  font-size: 12px;
+}
+.keshi{
+  padding-left: 8rpx;
+  font-size: 12px;
+  color: #6e7580;
+}
+.address{
+  padding-left: 8rpx;
+  font-size: 12px;
+  color: #6e7580;
+}
+.goodat{
+  width: 600rpx;
+  font-size: 12px;
+  color: #b4b4b4;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.star{
+  padding-top: 15rpx;
+  font-size: 11px;
+  color: #ffb400;
+}
+.star image{
+  width: 25rpx;
+  height: 25rpx;
+  padding-right: 6rpx;
+}
+.star .reply{
+  padding-left: 10rpx;
+  font-size: 11px;
+  color: #6e7580;
+}
+.price{
+  font-size: 14px;
+  padding-top: 20rpx;
+}
+.tuwen-price{
+  color: #f16561;
+  font-size: 14px;
+}
+.clear{
+  color: #999999;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+.discount{
+  margin-left: 10rpx;
+  background-color: #f06663;
+  color: #ffffff;
+  padding: 2rpx;
+  font-size: 11px;
+}
+.discount .last{
+  background-color: #fff;
+  color: #f06663;
+  font-size: 11px;
+  border-top: 1px solid #f06663;
+  border-bottom: 1px solid #f06663;
+  border-right: 1px solid #f06663;
+}
+.newperson{
+  padding-top: 10rpx;
+  font-size: 11px;
+  color: #999999;
+}
+.newperson image{
+  width: 20rpx;
+  height: 20rpx;
+  padding-right: 6rpx;
+}

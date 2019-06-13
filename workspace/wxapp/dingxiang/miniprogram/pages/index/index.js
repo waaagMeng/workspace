@@ -13,7 +13,8 @@ Page({
     waike:["神经外科","心胸外科","肝胆胰腺科","甲状腺科","普外科","美容整形科"],
     other:["全科","精神心里科","肿瘤科","影像检验科","疼痛麻醉科","药剂科"],
     imgUrls:["../../pic/swiper1.png","../../pic/swiper2.png"],
-    today:''
+    today:'',
+    curIndex: 0
   },
   getDate:function () {
     var date;
@@ -58,7 +59,8 @@ Page({
         let data = res.data.data;
         that.setData({
           shouye:data.shouye,
-          keshi:data.keshi
+          keshi:data.keshi,
+          lists:data.lists
         })
         wx.hideLoading()
       },
@@ -67,6 +69,16 @@ Page({
       }
     })
     this.getDate();
+  },
+  toList: function (e) {
+    let that = this
+    // console.log(e)
+    let currentId = e.currentTarget.dataset.id
+    // console.log(that.data.typeLists[currentId].typeList)
+    that.setData({
+      curIndex: e.currentTarget.dataset.id,
+      // typeList: that.data.typeLists[currentId].typeList
+    })
   },
 
   onGetUserInfo: function(e) {
