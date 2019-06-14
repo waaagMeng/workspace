@@ -16,6 +16,13 @@ Page({
     today:'',
     curIndex: 0
   },
+  toDetail:function (e) {
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url:'/pages/detail/detail?id=' + id
+    })
+    // console.log(e.currentTarget.dataset.id)
+  },
   getDate:function () {
     var date;
     date = new Date();
@@ -60,7 +67,9 @@ Page({
         that.setData({
           shouye:data.shouye,
           keshi:data.keshi,
-          lists:data.lists
+          lists:data.lists,
+          typeLists:data.typeLists,
+          typeList: data.typeLists[that.data.curIndex].typeList
         })
         wx.hideLoading()
       },
@@ -77,7 +86,7 @@ Page({
     // console.log(that.data.typeLists[currentId].typeList)
     that.setData({
       curIndex: e.currentTarget.dataset.id,
-      // typeList: that.data.typeLists[currentId].typeList
+      typeList: that.data.typeLists[currentId].typeList
     })
   },
 

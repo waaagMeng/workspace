@@ -1,0 +1,49 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<!-- <view class="page-container" wx:for="{{passages}}" wx:key="index"> -->
+  <view class="page-container"  wx:key="index">
+  <view class="page-header">
+    <view class="page-title">{{title}}</view>
+    <view class="page-author">
+      <text class="author">{{author}}</text>
+      <text class="time">{{time}}</text>
+  </view>
+  </view>
+  <view class="page-content">
+    <view class="content-pic">
+      <image src="{{pic}}" />
+    </view>
+    <view class="content-zy">{{zy}}</view>
+    <view class="weight">
+        {{weightone}}
+    </view>
+    <view class="explain">
+    <text>{{texta}}\n</text>
+    <text>{{textb}}\n</text>
+    <text>{{textc}}\n</text>
+    </view>
+    <view class="weight">
+        {{weighttwo}}
+    </view>
+    <view class="explain">
+    <text>{{textd}}\n</text>
+    <text>{{texte}}\n</text>
+    <text>{{textf}}\n</text>
+    <text>{{textg}}\n</text>
+    </view>
+    <view class="weight">
+       {{weightthree}}
+    </view>
+    <view class="explain">
+        <text>{{texth}}\n</text>
+        <text>{{texti}}\n</text>
+        <text>{{textj}}\n</text>
+    </view>
+    <view class="weight">
+        {{weightfour}}
+    </view>
+    <view class="explain">
+      <text>{{textk}}\n</text>
+      <text>{{textl}}\n</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+/* miniprogram/pages/detail/detail.wxss */
+.page-header{
+    padding: 20rpx 30rpx;
+}
+.page-title{
+    font-size: 20px;
+}
+.page-author{
+    padding-top: 15rpx;
+    font-size: 13px;
+    color: #999999;
+}
+.time{
+    padding-left: 8rpx;
+}
+.page-content{
+    padding-top: 20rpx;
+    padding-left: 20rpx;
+}
+.content-pic{
+    padding-left:30rpx;
+}
+.content-zy{
+    padding-top: 20rpx;
+    font-size: 14px;
+}
+.weight{
+    padding-top: 25rpx;
+    font-weight: bold;
+    font-size: 16px;
+}
+.explain{
+    font-size: 14px;
+}
+.explain text {
+    padding-top: 20rpx;
+}
