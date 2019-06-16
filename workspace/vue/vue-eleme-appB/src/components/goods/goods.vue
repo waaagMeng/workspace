@@ -23,6 +23,7 @@
             <h1 class="title">{{item.name}}</h1>
             <ul>
               <li
+              @click="selectFood(food,$event)"
                 v-for="(food,index) in item.foods"
                 :key="index"
                 class="food-item border-1px"
@@ -109,6 +110,13 @@ export default {
       let foodList = this.$refs.foodList
       let el = foodList[index]
       this.foodsScroll.scrollToElement(el, 300)
+    },
+    selectFood (food,event) {
+      if (event._constructed) {
+        return
+      }
+      this.selectFood = food
+      this.$refs.food.show()
     },
     addFood(target) {
       this._drop(target);
