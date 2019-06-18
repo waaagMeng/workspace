@@ -1,0 +1,8 @@
+<!--miniprogram/pages/search/search.wxml-->
+<view class="search">
+    <van-search value="{{ value }}" placeholder="# 防晒霜有毒？#" />
+</view>
+<view class="popular-search">
+    <view class="title">热门搜索</view>
+    <view class="popular-item">毛孔粗大</view>
+</view>

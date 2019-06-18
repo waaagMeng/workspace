@@ -1,5 +1,7 @@
 <view class="container" wx:if="{{display}}">
-    <van-search value="{{ value }}" placeholder="# 防晒霜有毒？#" />
+    <view class="search" bindtap="toSearch">
+        <van-search value="{{ value }}" placeholder="# 防晒霜有毒？#" />
+    </view>
     <view class="content">
         <view class="three">
             <view class="askdoc" data-index="1" bindtap="swichNav">
@@ -103,8 +105,10 @@
 </view>
 <!-- 跳到问医生页面 -->
 <view class="content-ask" wx:if="{{contentAsk}}">
-    <view class="back">〈 </view>
+    <view class="back-container">
+    <view class="back" bindtap="back">〈 </view>
     <van-search value="{{ value }}" placeholder="症状、疾病、医院、科室、医生名" />
+    </view>
     <view class="common-title">常见科室</view>
   <view class="common-sub" wx:for="{{keshi}}">
         <view class="single-sub">
@@ -133,6 +137,7 @@
   </view>
 <!-- 跳到名医就诊页面 -->
 <view class="content-mingyi" wx:elif="{{contentFam}}">
+ <view class="mingyi-detail" bindtap="back"><text class="mingyi-back">〈 </text>每周可提问义诊<text class="five">5</text>次</view>
   <swiper indicator-dots="true" circular="true"
   autoplay="true" interval="5000" duration="1000">
   <block wx:for="{{imgUrls}}">
@@ -141,7 +146,7 @@
     </swiper-item>
   </block>
   </swiper>
-  <view class="mingyi-detail">每周可提问义诊<text class="five">5</text>次</view>
+  <!-- <view class="mingyi-detail">每周可提问义诊<text class="five">5</text>次</view> -->
   <scroll-view class="titleList" scroll-x="{{true}}">
       <block wx:for="{{lists}}" wx:key="{{item.id}}">
           <view class="list {{curIndex === index ? 'listActive' : ''}}" bindtap="toList" data-id="{{item.id}}">{{item.name}}</view>

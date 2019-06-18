@@ -16,6 +16,19 @@ Page({
     today:'',
     curIndex: 0
   },
+  back:function() {
+    let that = this;
+    that.setData({
+      display:true,
+      contentAsk:false,
+      contentFam:false,
+    })
+  },
+  toSearch:function() {
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
+  },
   toDetail:function (e) {
     const id = e.currentTarget.dataset.id
     wx.navigateTo({

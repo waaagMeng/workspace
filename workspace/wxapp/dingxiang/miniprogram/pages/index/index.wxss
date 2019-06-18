@@ -111,6 +111,15 @@ transform:translateY(-50%);
   left: 40rpx;
   font-size: 20px;
 }
+.back-container{
+  display: flex;
+}
+.back{
+  padding-top: 20rpx;
+}
+.back-container van-search{
+  flex: 1;
+}
 .common-title{
   font-size: 14px;
   color: #6e7582;
@@ -154,7 +163,7 @@ transform:translateY(-50%);
 }
 .mingyi-detail{
   background-color: #f4f4f4;
-  font-size: 12px;
+  font-size: 14px;
   padding: 20rpx;
 }
 .five{
@@ -283,4 +292,7 @@ transform:translateY(-50%);
   width: 20rpx;
   height: 20rpx;
   padding-right: 6rpx;
+}
+.mingyi-back{
+  padding-right: 15rpx;
 }
