@@ -1,8 +1,39 @@
 <!--miniprogram/pages/search/search.wxml-->
 <view class="search">
-    <van-search value="{{ value }}" placeholder="# 防晒霜有毒？#" />
+    <van-search value="{{ value }}" placeholder="# 痘痘#"  bind:search="onSearch" bind:change="InputSearch"/>
 </view>
-<view class="popular-search">
+<view class="popular-search" wx:if="{{display}}">
     <view class="title">热门搜索</view>
-    <view class="popular-item">毛孔粗大</view>
+        <view class="popular-item" wx:for="{{popular}}" wx:key="index" bindtap="topopular" data-id="{{item.id}}">{{item.name}}</view>
+    <view class="clear"></view>
+</view>
+
+<!-- 搜索内容 -->
+
+<view class="search-content" wx:if="{{content}}">
+    <block>
+    <view class="search-title">{{arr[0].title}}</view>
+    <view class="explain">
+        <text>{{arr[0].texta}}\n</text>
+        <text>{{arr[0].textb}}\n</text>
+        <text>{{arr[0].textc}}\n</text>
+    </view>
+       <view class="zhengzhuang">
+        <view class="search-title">症状</view>
+        <view class="explain">
+            <text>{{arr[0].textd}}\n</text>
+            <text>{{arr[0].texte}}\n</text>
+            <text>{{arr[0].textf}}\n</text>
+            <text>{{arr[0].textg}}\n</text>
+        </view>
+    </view>
+    <view class="madecine">
+        <view class="search-title">治疗</view>
+        <view class="m-content">
+        <text>{{arr[0].texth}}\n</text>
+        <text>{{arr[0].texti}}\n</text>
+        <text>{{arr[0].textj}}\n</text>
+        </view>
+    </view>
+    </block>
 </view>

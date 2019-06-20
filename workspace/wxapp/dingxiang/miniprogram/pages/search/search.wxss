@@ -1,1 +1,36 @@
 /* miniprogram/pages/search/search.wxss */
+.popular-search .title{
+    font-size: 14px;
+    padding: 20rpx;
+}
+.clear{
+    clear: left;
+}
+.popular-item{
+    float: left;
+    padding: 25rpx;
+    font-size: 13px;
+    color: #666666;
+    background-color: #f4f4f4;
+    border-radius: 25%;
+    margin-left: 25rpx;
+    margin-top: 15rpx;
+}
+.search-title{
+    font-size: 15px;
+    padding: 20rpx;
+}
+.explain{
+    padding-left: 35rpx;
+    font-size: 14px;
+    line-height: 50rpx;
+    color: #666666;
+    border-bottom: 10rpx solid #f4f4f4;
+    padding-bottom: 20rpx;
+}
+.m-content{
+    padding-left: 35rpx;
+    font-size: 14px;
+    line-height: 50rpx;
+    color: #666666;
+}

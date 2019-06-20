@@ -14,7 +14,9 @@ Page({
     other:["全科","精神心里科","肿瘤科","影像检验科","疼痛麻醉科","药剂科"],
     imgUrls:["../../pic/swiper1.png","../../pic/swiper2.png"],
     today:'',
-    curIndex: 0
+    curIndex: 0,
+    typeLists:[],
+    typeList:[]
   },
   back:function() {
     let that = this;
@@ -96,7 +98,7 @@ Page({
     let that = this
     // console.log(e)
     let currentId = e.currentTarget.dataset.id
-    // console.log(that.data.typeLists[currentId].typeList)
+    console.log(that.data.typeLists[currentId].typeList)
     that.setData({
       curIndex: e.currentTarget.dataset.id,
       typeList: that.data.typeLists[currentId].typeList
