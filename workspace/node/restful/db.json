@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "我今天这边也在下雨，好巧哦",
+      "author": "typicode"
+    },
+    {
+      "page": "1",
+      "categoryId": "1872",
+      "pageSize": "10",
+      "id": 3
+    },
+    {
+      "body": "helloworld",
+      "postId": "1",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "body": "啊啦啦啦",
+      "id": 2,
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
