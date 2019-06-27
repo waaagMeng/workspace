@@ -2,7 +2,7 @@
   <div class="search">
 		<div class="search-box-wrapper">
 			<!-- 搜索框组件 -->
-			<v-search-box @query="onQueryChange"></v-search-box>
+			<v-search-box @query="onQueryChange" ref="searchBox"></v-search-box>
 		</div>
 		<div class="shortcut-wrapper" ref="shortcutWrapper" v-show="!query">
 			<v-scroll class="shortcut" ref="shortcut" :data="shortcut" :refreshDelay="refreshDelay">
@@ -28,14 +28,14 @@
 							</span>
 						</h1>
 						<!-- 搜索历史列表 -->
-						<v-search-list></v-search-list>
+						<v-search-list :searches="searchHistory" @select="addQuery"></v-search-list>
 					</div>
 				</div>
 			</v-scroll>
 		</div>
 		<!-- 搜索结果 -->
 		<div class="search-result" v-show="query" ref="searchResult">
-			<v-suggest :query="query"></v-suggest>
+			<v-suggest :query="query" @listScroll="blurInput" @select="saveSearch" ref="suggest"></v-suggest>
 		</div>
 	</div>
 </template>
@@ -45,21 +45,15 @@ import searchBox from '@/components/searchBox.vue'
 import searchList from '@/components/searchList.vue'
 import scroll from '@/components/scroll.vue'
 import suggest from '@/components/suggest.vue'
+import api from '@/api'
+import { mapGetters } from 'vuex'
+import { searchMixin } from '@/common/mixin.js'
 export default {
 	name: 'Search',
  data() {
 	 return {
-		 query: '',
 		 shortcut:[],
-		 refreshDelay: 1,
-		 searchHistory: [1],
-		 hotKey: [
-			 { first: '许嵩新歌发布'},
-			 { first: '新歌发布'},
-			 { first: '解药'},
-			 { first: '孤单心事'},
-			 { first: '你曾是少年'}
-		 ]
+		 hotKey: []
 	 }
  },
  components: {
@@ -68,12 +62,23 @@ export default {
 	 'v-search-list' : searchList,
 	 'v-suggest': suggest
 	},
+	mixins: [searchMixin],
 	methods: {
 		showConfirm () {},
-		onQueryChange (query) {
-			// console.log(query)
-			this.query = query
+		
+		
+		_getHotKey () {
+			api.HotSearchKey().then((res) => {
+				if (res.code === 200) {
+					this.hotKey = res.result.hots.slice(0,10)
+				}
+			})
 		}
+	},
+	
+	created() {
+		this._getHotKey()
+		// this.$store.dispatch('saveSearchHistory',query)
 	},
 }
 </script>
