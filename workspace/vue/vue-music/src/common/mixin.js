@@ -34,3 +34,48 @@ export const searchMixin = {
         ])
     }
 }
+
+export const playerMixin = {
+    computed: {
+        ...mapGetters([
+            'playList',
+            'currentSong',
+            'currentIndex',
+            'favoriteList'
+        ]),
+        //点亮小星星
+        favoriteIcon () {
+            return this.getFavoriteIcon(this.currentSong)
+        }
+    },
+    methods: {
+        toggleFavorite (song) {
+            if (this.isFavorite(song)) {
+                this.deleteFavoriteList(song)
+            } else {
+                this.saveFavoriteList(song)
+            }
+        },
+        getFavoriteIcon (song) {
+            if (this.isFavorite(song)) {  //已经是你喜欢收藏的那首歌
+                return 'icon-favorite'
+            }
+            return 'icon-not-favorite'
+        },
+        isFavorite (song) {
+            const index = this.favoriteList.findIndex((item) => {
+                return item.id === song.id
+            })
+            return index > -1
+        },
+        //这几个方法无需在actions定义 就是直接拿来用
+        ...mapMutations({
+            setPlaylist: 'SET_PLAYLIST',
+            setCurrentIndex: 'SET_CURRENT_INDEX',
+            setPlaying: 'SET_PLAYING'
+        }),
+        ...mapActions([
+            'saveFavoriteList'
+        ])
+    },
+}
