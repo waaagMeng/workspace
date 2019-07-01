@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 关于call,bind,apply -->
+    <script>
+        var a = {
+            user:'蜗牛',
+            fn: function (n,m) {
+                console.log(this.user)
+                console.log(n + m)
+            }
+        }
+        var b = a.fn      //谁调用它 this就指向谁  这里this指向b 即全局window
+        //b.call(a,5)   //强制让this指向a   把b的作用域掰到a  第一个参数就是this指向谁，第二三四。。个参数就是你逻辑要用到的东西
+        // a.fn()   //这里this指向a对象
+        //b.apply(a,[1,1])   //apply后面的参数必须是数组
+        var c =b.bind(a,2)   //bind返回的是一个函数 再把它当成函数去调用
+        c(3,4)
+    </script>
+</body>
+</html>
