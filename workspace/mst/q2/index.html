@@ -22,6 +22,19 @@
         //b.apply(a,[1,1])   //apply后面的参数必须是数组
         var c =b.bind(a,2)   //bind返回的是一个函数 再把它当成函数去调用
         c(3,4)
+        //call方法的实现原理
+        Function.prototype.call= function () {
+            let [thisArg, ...args] = [...arguments]
+            if (!thisArg) {
+                thisArg = typeof window === 'undefined' ? global : window
+            }
+            //this的指向是当前函数 func.call 
+            thisArg.func = this
+            //执行函数
+            let result = thisArg.func(...args)  
+            delete thisArg.func //thisArg上并没有 func属性，因此需要移除
+            return result
+        }
     </script>
 </body>
 </html>

@@ -8,19 +8,47 @@
 </head>
 <body>
     <script>
-        function _new () {
-            let target = {} 
-            let [constructor,...args] = [...arguments]
-            target.__proto__ = constructor.prototype  //执行【原型】连接，target就会成为constructor的实例
-            //执行构造函数，将属性或者方法添加到我们创建的对象上
-            let result = constructor.apply(target, args)
-            if (result && (typeof(result) === 'function')) {
-                //如果构造函数结果返回的是一个对象 那么返回这个对象
-                return result
+        // function _new () {
+        //     let target = {} 
+        //     let [constructor,...args] = [...arguments]
+        //     target.__proto__ = constructor.prototype  //执行【原型】连接，target就会成为constructor的实例
+        //     //执行构造函数，将属性或者方法添加到我们创建的对象上
+        //     let result = constructor.apply(target, args)
+        //     if (result && (typeof(result) === 'function')) {
+        //         //如果构造函数结果返回的是一个对象 那么返回这个对象
+        //         return result
+        //     }
+        //     //如果构造函数结果返回的不是一个对象，那么就返回创建的新对象
+        //     return target
+        // } 
+
+        //深拷贝的原理
+        function deepClone (obj,hash = new WeakMap()) {  //递归来层层获取
+            if (obj instanceof RegExp) {  //是否是正则类型
+                return RegExp(obj)
             }
-            //如果构造函数结果返回的不是一个对象，那么就返回创建的新对象
-            return target
-        } 
+            if (obj instanceof Date) {  //是否是date类型
+                return Date(obj)
+            }
+            if (obj === null || typeof obj !== 'object') {
+                //如果不是复杂的数据类型，直接返回
+                return obj
+            }
+            if (hash.has(obj)) {
+                return hash.get(obj)
+            }
+            // 如果obj是数组(复杂数据类型)，那么obj.constructor是[function: Array]
+            //如果obj是对象，那么obj.constructor是[function: Object]
+            let t = new obj.constrctor()
+            hash.set(obj,t)  
+            for (let key in obj) {
+                //递归
+                if (obj.hasOwnProperty(key)) {  //是否是自身的属性
+                    t[key] = deepClone(obj[key],hash)
+                }
+            }
+            return t 
+        }
     </script>
 </body>
 </html>
