@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="debounce">
+        <button id="submit">提交</button>
+    </div>
+    <script>
+        //防抖节流
+        function debounce (fn,time) {  //第一个参数是一个方法 time时间内只能执行fn方法一次
+            let previous = 0, timer = null;
+            //将debounce处理结果当做函数返回
+            return function(...args) {   //这个方法支持多个参数 ...args
+                //获取当前时间，转换成时间戳，单位是毫秒
+                let now = +new Date()  //转换成从那一年到现在是多少毫秒 好像是197几年
+
+                //判断上次触发的时间和本次触发的时间差是否小于时间间隔，即参数time
+                if (now - previous < time) {  
+                    //如果小于，则本次触发设立一个新的定时器
+                    //定时器时间结束后执行fn
+                    if (timer) clearTimeout(timer)
+                    timer = setTimeout(() => {
+                        previous = now
+                        fn.apply(this,args)
+                    }, time);
+                } else {
+                    //第一次执行
+                    //或者时间间隔超过设定的时间间隔 则执行fn
+                    previous = now
+                    fn.apply(this,args)   //之所以用fn.apply 不直接fn()调用 是因为要传参，而且参数个数不固定 
+                }
+            }
+        }
+        //使用这个节流方法
+        const oDebounce = debounce (() => test(),3000)
+        
+        function test() {
+            console.log('提交成功')
+        }
+        let oSubmit = document.getElementById('submit')  //给osubmit添加一个点击事件
+        oSubmit.addEventListener('click',oDebounce)
+        
+    </script>
+</body>
+</html>
