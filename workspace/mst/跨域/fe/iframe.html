@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 通过Iframe可以把后端的网页拿到 -->
+    <iframe src="http://localhost:9999/"  id="ifwindow" frameborder="0"></iframe>
+    <div>
+        这是fe/iframe.html
+    </div>
+    <script>
+        //
+        window.onload = function () {
+            const ifwindow = document.getElementById('ifwindow');
+            const targetWindow = ifwindow.contentWindow;
+            //窗口.postMessage('消息'，'源') 源就是你要发送到哪个域名哪个端口
+            targetWindow.postMessage('name1','http://localhost:9999/')
+            window.addEventListener('message',function(e) {
+                console.log('请求得到的数据',e.data);
+            })
+        }
+    </script>
+</body>
+</html>
