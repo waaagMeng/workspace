@@ -24,6 +24,15 @@ router.get('/api/post', async function (ctx) {
     { title: 'php 入门到精通', createTime: '2018-11-11' },
   ]
 });
+router.get('/api/jsonp',async (ctx) => {
+  const cb = ctx.request.query.callback;
+  console.log(cb)
+  const person = {
+    name: 'name1',age:18
+  }
+  // 设置返回的内容
+  ctx.body = `${cb}(${JSON.stringify(person)})`;
+})
 app
   .use(router.routes())
   .use(router.allowedMethods());

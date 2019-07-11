@@ -14,7 +14,7 @@
         window.addEventListener('message',function(e) {
             const data = e.data;
             console.log('data',data);
-            fetch('http://localhost:9999/api/post?name='+ data, {
+            fetch('http://localhost:9999/api/post?name=', {
             headers: {
                 'X-custom': 'abc'
             },
@@ -24,7 +24,10 @@
         .then(res => {
             // console.log('请求结果',res)
             //把请求的数据给前端页面
-            window.parent.postMessage(res,'*')
+            // window.parent.postMessage(res,'*')
+            window.name = JSON.stringify(res);
+            //第三方页面的作用 负责把拿到的数据给前端页面
+            window.location = "http://127.0.0.1:50732/windowNameMiddle.html"
         })  
         })
     </script>
