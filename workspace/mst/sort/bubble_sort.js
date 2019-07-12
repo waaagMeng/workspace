@@ -1,3 +1,4 @@
+//z这个是选择排序
 function bubbleSort(arr) {
     var len = arr.length;
     var minIndex,temp;
