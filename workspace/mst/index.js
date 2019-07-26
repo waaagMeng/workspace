@@ -94,4 +94,4 @@ function outputArr(arr) {
         return pre.concat(Array.isArray(item) ? outputArr(item) : item)
     },[])
 }
- console.log(outputArr(gArr))
+console.log(outputArr(gArr))
