@@ -10,20 +10,22 @@ var data = {
 var pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
-  password: 'xfwnxn1023',
+  password: '123456',
   database: 'trip'
 })
 // 开始请求
 router.post('/', function(req, res, next) {
   let userName = req.body.userName
-  let password = req.body.password
+  let password = req.body.passWord
+  console.log({userName, password})
   // 从数据库查找数据，最后返回给前端
   pool.query(`SELECT * FROM user where userName = ${userName}`, function(err, results, fields) {
     if (err) {
       data.code = 500
       data.msg = err
     }
-    if (results[0].password === password) {
+    console.log(results[0])
+    if (results[0].passWord === password) {
       selectUser(results[0].userId)
     } else {
       data.code = 400
